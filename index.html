@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/styles/index.css">
+    <title>Cardápio Digital Completo</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    
+</head>
+
+<body>
+    <button class="btn-garcom" onclick="abrirModal()">
+    🍺 Chamar Garçom
+</button>
+
+
+    <!-- ==================== HEADER ==================== -->
+    <div class="header">
+        <h2>🍻 Happy Hour do Boteco</h2>
+        <p class="timer">Termina em: <span id="countdown"></span></p>
+    </div>
+
+    <!-- ==================== SLIDER DE CATEGORIAS ==================== -->
+    <div class="category-slider">
+        <span class="category-btn active" onclick="filtrar('promocoes')">Promoções</span>
+        <span class="category-btn" onclick="filtrar('drinks')">Drinks</span>
+        <span class="category-btn" onclick="filtrar('caipirinhas')">Caipirinhas</span>
+        <span class="category-btn" onclick="filtrar('cervejas')">Cervejas</span>
+        <span class="category-btn" onclick="filtrar('porcoes')">Porções</span>
+        <span class="category-btn" onclick="filtrar('combos')">Combos</span>
+        <span class="category-btn" onclick="filtrar('semalcool')">Sem Álcool</span>
+    </div>
+
+    <div class="container mt-4">
+
+        <!-- ==================== PROMOÇÕES ==================== -->
+        <div class="categoria ativo" id="promocoes">
+            <h4 class="section-title">🔥 Promoções</h4>            
+
+            <div class="menu-card heineken-card">
+    <div class="row">
+        <div class="col-4 position-relative">
+            <img src="src/balde-heineken.png" width="150">
+            <div class="glow"></div>
+        </div>
+        <div class="col-8">
+            <h5>Balde de Heineken</h5>
+            <p>6 long necks bem geladas.</p>
+            <p class="price">R$ 49,90</p>
+            <button class="btn-pedir" onclick="abrirModalItem('Balde de Heineken')">Pedir Agora</button>
+        </div>
+    </div>
+</div>
+
+
+
+            <div class="menu-card">
+                <div class="row">
+                    <div class="col-4">
+                        <img src="src/Batata-rustica.png" width="150">
+                    </div>
+                    <div class="col-8">
+                        <h5>Batata Rústica</h5>
+                        <span class="promo-tag">Combo Especial</span>
+                        <p>Porção grande com páprica.</p>
+                        <p class="price">R$ 19,90</p>
+                        <button class="btn-pedir" onclick="abrirModalItem('Balde de Heineken')">Pedir Agora</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== DRINKS ==================== -->
+        <div class="categoria" id="drinks">
+            <h4 class="section-title">🍹 Drinks Clássicos</h4>
+
+            <div class="menu-card">
+                <div class="row">
+                    <div class="col-4"><img src="src/Gin-tonica.png" width="150"></div>
+                    <div class="col-8">
+                        <h5>Gin Tônica</h5>
+                        <p>Gin + tônica + limão siciliano.</p>
+                        <p class="price">R$ 19,90</p>
+                        <button class="btn-pedir" onclick="abrirModalItem('Balde de Heineken')">Pedir Agora</button>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <div class="row">
+                    <div class="col-4"><img src="src/Aperol-spritz.png" width="150"></div>
+                    <div class="col-8">
+                        <h5>Aperol Spritz</h5>
+                        <p>Aperol, espumante e laranja.</p>
+                        <p class="price">R$ 24,90</p>
+                        <button class="btn-pedir" onclick="abrirModalItem('Balde de Heineken')">Pedir Agora</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== CAIPIRINHAS ==================== -->
+        <div class="categoria" id="caipirinhas">
+            <h4 class="section-title">🍸 Caipirinhas</h4>
+
+            <div class="menu-card">
+                <div class="row">
+                    <div class="col-4"><img src="src/Caipirinha-de-limão.png" width="150"></div>
+                    <div class="col-8">
+                        <h5>Caipirinha de Limão</h5>
+                        <p>Limão e cachaça.</p>
+                        <p class="price">R$ 12,00</p>
+                        <button class="btn-pedir" onclick="abrirModalItem('Balde de Heineken')">Pedir Agora</button>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <div class="row">
+                    <div class="col-4"><img src="src/Caipirinha-de-morango.png" width="150"></div>
+                    <div class="col-8">
+                        <h5>Caipirinha de Morango</h5>
+                        <p>Morango fresco e vodka.</p>
+                        <p class="price">R$ 16,00</p>
+                        <button class="btn-pedir" onclick="abrirModalItem('Balde de Heineken')">Pedir Agora</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== CERVEJAS ==================== -->
+        <div class="categoria" id="cervejas">
+            <h4 class="section-title">🍺 Cervejas Long Neck</h4>
+
+            <div class="menu-card text-center">
+                <h5>Heineken</h5>
+                <p class="price">R$ 12,00</p>
+                <button class="btn-pedir" onclick="abrirModalItem('Balde de Heineken')">Pedir Agora</button>
+
+            </div>
+
+            <div class="menu-card text-center">
+                <h5>Brahma Duplo Malte</h5>
+                <p class="price">R$ 10,00</p>
+                <button class="btn-pedir" onclick="abrirModalItem('Balde de Heineken')">Pedir Agora</button>
+
+            </div>
+        </div>
+
+        <!-- ==================== PORÇÕES ==================== -->
+        <div class="categoria" id="porcoes">
+            <h4 class="section-title">🍟 Porções</h4>
+
+            <div class="menu-card">
+                <div class="row">
+                    <div class="col-4"><img src="src/Calabresa-acebolada.png" width="150"></div>
+                    <div class="col-8">
+                        <h5>Calabresa Acebolada</h5>
+                        <p>Acompanha pão.</p>
+                        <p class="price">R$ 22,90</p>
+                        <button class="btn-pedir" onclick="abrirModalItem('Balde de Heineken')">Pedir Agora</button>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <div class="row">
+                    <div class="col-4"><img src="src/torresmo.png" width="150"></div>
+                    <div class="col-8">
+                        <h5>Torresmo</h5>
+                        <p>Crocante por fora, macio por dentro.</p>
+                        <p class="price">R$ 18,90</p>
+                        <button class="btn-pedir" onclick="abrirModalItem('Balde de Heineken')">Pedir Agora</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== COMBOS ==================== -->
+        <div class="categoria" id="combos">
+            <h4 class="section-title">💥 Combos</h4>
+
+            <div class="menu-card text-center">
+                <h5>Combo da Mesa</h5>
+                <p>3 porções + 4 chopes</p>
+                <p class="price">R$ 79,90</p>
+                <button class="btn-pedir" onclick="abrirModalItem('Balde de Heineken')">Pedir Agora</button>
+
+            </div>
+
+            <div class="menu-card text-center">
+                <h5>Batata + 2 chopes</h5>
+                <p>Perfeito para dividir!</p>
+                <p class="price">R$ 29,90</p>
+                <button class="btn-pedir" onclick="abrirModalItem('Balde de Heineken')">Pedir Agora</button>
+
+            </div>
+        </div>
+
+        <!-- ==================== SEM ÁLCOOL ==================== -->
+        <div class="categoria" id="semalcool">
+            <h4 class="section-title">🥤 Sem Álcool</h4>
+
+            <div class="menu-card text-center">
+                <h5>Refrigerante</h5>
+                <p class="price">R$ 6,00</p>
+                <button class="btn-pedir" onclick="abrirModalItem('Balde de Heineken')">Pedir Agora</button>
+
+            </div>
+
+            <div class="menu-card text-center">
+                <h5>Água com gás</h5>
+                <p class="price">R$ 5,00</p>
+                <button class="btn-pedir" onclick="abrirModalItem('Balde de Heineken')">Pedir Agora</button>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ==================== JS ==================== -->
+    <script>
+        /* 🌙 MODO NOTURNO AUTOMÁTICO */
+        const hora = new Date().getHours();
+        if (hora < 18) {
+            document.body.classList.add("light-mode");
+        }
+
+        /* FUNÇÃO DE FILTRAR CATEGORIAS */
+        function filtrar(categoria) {
+            document.querySelectorAll(".categoria").forEach(sec => sec.classList.remove("ativo"));
+            document.getElementById(categoria).classList.add("ativo");
+
+            document.querySelectorAll(".category-btn").forEach(btn => btn.classList.remove("active"));
+            event.target.classList.add("active");
+        }
+
+        /* TIMER DO HAPPY HOUR */
+        function iniciarTimer() {
+            let tempo = 3600; // 1 hora
+
+            setInterval(() => {
+                let h = Math.floor(tempo / 3600);
+                let m = Math.floor((tempo % 3600) / 60);
+                let s = tempo % 60;
+
+                document.getElementById("countdown").innerText =
+                    `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+
+                tempo--;
+
+                if (tempo < 0) tempo = 0;
+            }, 1000);
+        }
+
+        iniciarTimer();
+    </script>
+
+    <script>function toggleHighlight() {
+        let info = document.getElementById("highlight-info");
+     info.style.display = info.style.display === "block" ? "none" : "block";
+    }
+    </script>
+
+    
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- MODAL PARA PEDIR -->
+<div class="modal fade" id="modalMesa" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content" style="background: #2d2215; color: var(--mostarda);">
+      <div class="modal-header">
+        <h5 class="modal-title">Informe o número da mesa</h5>
+      </div>
+
+      <div class="modal-body">
+        <input type="number" id="mesaNumero" class="form-control" placeholder="Ex: 12">
+        <input type="hidden" id="itemSelecionado">
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button class="btn btn-warning" onclick="enviarPedido()">Enviar Pedido</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="alertaGarcom" class="alert alert-success"
+     style="display:none; position: fixed; top: 20px; left: 50%;
+            transform: translateX(-50%); z-index: 9999; font-size: 18px;
+            background: #d9a05b; color:#2d2215; font-weight: bold;">
+</div>
+<script>
+// ABRE MODAL DE GARÇOM
+function abrirModal() {
+    document.getElementById("itemSelecionado").value = "Chamar Garçom";
+    let modal = new bootstrap.Modal(document.getElementById('modalMesa'));
+    modal.show();
+}
+
+// ABRE MODAL DO ITEM CLICADO
+function abrirModalItem(item) {
+    document.getElementById("itemSelecionado").value = item;
+    let modal = new bootstrap.Modal(document.getElementById('modalMesa'));
+    modal.show();
+}
+
+// ENVIA O PEDIDO
+function enviarPedido() {
+    let mesa = document.getElementById("mesaNumero").value;
+    let item = document.getElementById("itemSelecionado").value;
+
+    if (mesa === "") {
+        alert("Digite o número da mesa.");
+        return;
+    }
+
+    document.getElementById("alertaGarcom").innerText =
+        `Pedido enviado para a Mesa ${mesa}: ${item} — Garçom a caminho!`;
+
+    document.getElementById("alertaGarcom").style.display = "block";
+
+    setTimeout(() => {
+        document.getElementById("alertaGarcom").style.display = "none";
+    }, 3500);
+
+    document.getElementById("mesaNumero").value = "";
+
+    let modal = bootstrap.Modal.getInstance(document.getElementById('modalMesa'));
+    modal.hide();
+}
+</script>
+
+
+</body>
+</html>
+
