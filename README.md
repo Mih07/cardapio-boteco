@@ -59,7 +59,7 @@ Se quiser ver mais projetos, entre em contato:
 **Desenvolvedora:** Michele
 **Meu site:** seusitesuacara.com
 **Instagram:** @seusitesuacara
-**Portfólio:** frontendmichele.com
+**Portfólio:** https://mih07.github.io/cardapio-boteco/
 
 ---
 
