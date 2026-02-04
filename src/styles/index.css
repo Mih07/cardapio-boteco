@@ -14,7 +14,7 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(6px);
     color: var(--texto);
     font-family: "Arial";
 }
@@ -43,11 +43,11 @@ body::before {
 /* BOTÃO FIXO – CHAMAR GARÇOM */
 .btn-garcom {
     position: fixed;
-    bottom: 25px;
-    right: 25px;
+    bottom: 1px;
+    right: 15px;
     background: var(--mostarda);
     color: black;
-    padding: 14px 22px;
+    padding: 4px 22px;
     border-radius: 50px;
     font-size: 16px;
     font-weight: bold;
@@ -60,6 +60,7 @@ body::before {
 .btn-garcom:hover {
     background: #f8d8a2;
 }
+
 
 /* ANIMAÇÃO GELO/BRILHO NO BALDE */
 .heineken-card .glow {
@@ -116,7 +117,7 @@ body::before {
     background: var(--card);
     border-left: 6px solid var(--mostarda);
     padding: 18px;
-    margin-bottom: 22px;
+    margin-bottom: 30px;
     border-radius: 12px;
     box-shadow: 0 8px 15px var(--sombra);
     transition: .3s;
@@ -127,11 +128,19 @@ body::before {
     transform: scale(1.02);
     box-shadow: 0 12px 20px var(--sombra);
 }
+.menu-card h5 {
+    margin-left: 10px;
+}
+
+.menu-card p {
+    margin-left: 10px;
+}
 
 .price {
     color: var(--mostarda);
     font-size: 22px;
     font-weight: bold;
+    margin-top: 5px;
 }
 
 img {
@@ -144,10 +153,10 @@ img {
 
 /* BOTÃO PEDIR AGORA */
 .btn-pedir {
-    margin-top: 8px;
+    margin: 5px;
     background: var(--mostarda);
     color: black;
-    padding: 6px 12px;
+    padding: 5px 13px;
     border-radius: 8px;
     font-weight: bold;
     border: none;
