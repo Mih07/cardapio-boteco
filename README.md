@@ -63,7 +63,5 @@ Se quiser ver mais projetos, entre em contato:
 
 ---
 
-
-
 Este projeto é apenas para estudo e demonstração no portfólio.
 Não há backend ou processamento real de pedidos.
